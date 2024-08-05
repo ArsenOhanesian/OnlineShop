@@ -11,13 +11,14 @@ struct ProductCardView: View {
     // MARK: - Properties
     @EnvironmentObject var vm: ViewModel
     let product: ProductModel
+    
+    private let padding: CGFloat = 10
+    private let cellHeight: CGFloat = UIScreen.main.bounds.width * 0.5
+    
     // MARK: - Body
     var body: some View {
         GeometryReader{ geo in
             let size = geo.size
-            
-            
-            
             ZStack(alignment: .bottom) {
                 ZStack(alignment: .topTrailing){
                     if let url = URL(string: product.image){
@@ -25,10 +26,11 @@ struct ProductCardView: View {
                     }
                     
                     Button{
+                        print("Hehe")
                         vm.toggleFavorite(in: product)
                     } label: {
-                        Image(systemName: "heart.fill")
-                            .padding(8)
+                        Image(systemName: Helper.Images.heart)
+                            .padding(padding)
                             .foregroundStyle(product.isFavorite ? .red : .white)
                             .background(.black)
                             .clipShape(Circle())
@@ -46,17 +48,15 @@ struct ProductCardView: View {
                         .subTitleFont()
                         
                 }
-                .padding(10)
+                .padding(padding)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .background(.background.opacity(0.5))
                 .cornerRadius(10)
-                .padding(10)
+                .padding(padding)
                 
             }
         }
-        .frame(height: UIScreen.main.bounds.width * 0.5)
-//        .background(.background.opacity(0.5))
-//        .padding()
+        .frame(height: cellHeight)
     }
 }
 

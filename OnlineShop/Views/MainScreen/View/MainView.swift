@@ -10,9 +10,10 @@ import FirebaseFirestore
 
 struct MainView: View {
     // MARK: - Properties
-    @FirestoreQuery(collectionPath: "shop") var items: [ProductModel]
+    @FirestoreQuery(collectionPath: Helper.Firebase.shop) var items: [ProductModel]
     @EnvironmentObject var vm: ViewModel
     var columns = Array(repeating: GridItem(), count: 2)
+    
     private let hPadding: CGFloat = 10
     
     // MARK: - Body
@@ -33,12 +34,11 @@ struct MainView: View {
             .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.2), radius: 8, x: 5, y: 8)
             
             // MARK: - Navigation Bar
-            .navigationTitle("Товари")
+            .navigationTitle(Helper.Titles.main)
             .toolbar{
                 ToolbarItem(placement: .topBarLeading) {
                     NavigationLink(destination: FavoritesView()) {
-                        Image(systemName: "heart.fill")
-                            .font(.title2)
+                        FavoritesButton()
                     }
                     .buttonStyle(.plain)
                 }

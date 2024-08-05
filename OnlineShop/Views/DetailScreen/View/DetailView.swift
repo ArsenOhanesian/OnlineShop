@@ -12,12 +12,15 @@ struct DetailView: View {
     @EnvironmentObject var vm: ViewModel
     var product: ProductModel
     
+    private let widthImage: CGFloat = UIScreen.main.bounds.width
+    private let heightImage: CGFloat = UIScreen.main.bounds.height / 1.7
+    
     // MARK: - Body
     var body: some View {
         ZStack(alignment: .topLeading) {
             VStack{
                 if let url = URL(string: product.image){
-                    CardImageView(url: url, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.7)
+                    CardImageView(url: url, width: widthImage, height: heightImage)
                         .shadow(color: .black.opacity(0.3), radius: 10, x: 5, y: 8)
                         .ignoresSafeArea()
                     

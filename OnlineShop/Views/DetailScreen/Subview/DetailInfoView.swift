@@ -12,9 +12,12 @@ struct DetailInfoView: View {
     @EnvironmentObject var vm: ViewModel
     let product: ProductModel
     
+    private let spacing: CGFloat = 20
+    private let hPadding: CGFloat = 30
+    
     // MARK: - Body
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
+        VStack(alignment: .leading, spacing: spacing) {
             HStack{
                 Text(product.name)
                     .titleFont()
@@ -30,11 +33,11 @@ struct DetailInfoView: View {
             
             Spacer()
             
-            CustomMainButton(title: "Add To Card") {
+            CustomMainButton(title: Helper.Button.add) {
                 vm.addToCart(product)
             }
             
         }
-        .padding(.horizontal, 30)
+        .padding(.horizontal, hPadding)
     }
 }

@@ -10,11 +10,11 @@ import FirebaseFirestore
 
 struct FavoritesView: View {
     // MARK: - Properties
-    @FirestoreQuery(collectionPath: "shop",
-                    predicates: [.isEqualTo("isFavorite", true)]) private var favoriteProducts: [ProductModel]
+    @FirestoreQuery(collectionPath: Helper.Firebase.shop,
+                    predicates: [.isEqualTo(Helper.Firebase.isFavorite, true)]) private var favoriteProducts: [ProductModel]
     
-    var columns = Array(repeating: GridItem(), count: 2)
-    
+    private var columns = Array(repeating: GridItem(), count: 2)
+    private let hPadding: CGFloat = 10
     
     // MARK: - Body
     var body: some View {
@@ -29,9 +29,9 @@ struct FavoritesView: View {
                 }
             }
         }
-        .padding(.horizontal, 10)
+        .padding(.horizontal, hPadding)
         .background(.secondary.opacity(0.3))
-        .navigationTitle("Обране")
+        .navigationTitle(Helper.Titles.favorite)
     }
 }
 

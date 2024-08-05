@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct BackButtonView: View {
-    
+    // MARK: - Properties
     @Environment(\.dismiss) var dismiss
+    
+    // MARK: - Body
     var body: some View {
         Button{
             dismiss()
@@ -19,7 +21,7 @@ struct BackButtonView: View {
                     .frame(width: 34)
                     .foregroundStyle(.black)
                     .opacity(0.3)
-                Image(systemName: "chevron.left")
+                Image(systemName: Helper.Images.chevron)
                     .font(.title3)
                     .fontWeight(.medium)
                     .foregroundStyle(.white)

@@ -11,10 +11,12 @@ struct CartButton: View {
     // MARK: - Properties
     var numberOfProducts: Int
     
+    private let badgeSize: CGFloat = 17
+    
     // MARK: - Body
     var body: some View {
         ZStack(alignment: .topTrailing){
-            Image(systemName: "cart.fill")
+            Image(systemName: Helper.Images.cart)
                 .font(.title2)
                 .padding(.top, 5)
                 
@@ -22,7 +24,7 @@ struct CartButton: View {
                 Text("\(numberOfProducts)")
                     .font(.caption).bold()
                     .foregroundStyle(.white)
-                    .frame(width: 17, height: 17)
+                    .frame(width: badgeSize, height: badgeSize)
                     .background(.red)
                     .clipShape(Circle())
             }

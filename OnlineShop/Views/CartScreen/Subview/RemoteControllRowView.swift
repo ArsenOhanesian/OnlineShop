@@ -11,42 +11,34 @@ struct RemoteControllRowView: View {
     // MARK: - Properties
     let product: ProductModel
     @EnvironmentObject var vm: ViewModel
+    
+    private let spacing: CGFloat = 25
+    
     // MARK: - Body
     var body: some View {
-        VStack(alignment: .trailing, spacing: 25){
-            Button {
+        VStack(alignment: .trailing, spacing: spacing){
+            
+            // MARK: - Cancel Button
+            CustomRemoteControlButton(name: Helper.Button.cancelButton,size: .title2) {
                 vm.removeFromCart(product)
-            } label: {
-                Image(systemName: "xmark.circle.fill")
-                    .font(.title2)
             }
-            .buttonStyle(.plain)
             
             HStack{
-                Button{
+                // MARK: - Decrease
+                CustomRemoteControlButton(name: Helper.Button.decreaseButton) {
                     vm.decreaseQuantity(product)
-                } label: {
-                    Image(systemName: "minus.rectangle.fill")
-                        .foregroundStyle(.primary)
-                        .font(.title)
                 }
-                .buttonStyle(.plain)
                 
+                // MARK: - Quantity
                 if let quantityInCart = product.quantityInCart{
                     Text("\(quantityInCart)")
                         .titleFont()
                 }
                 
-                
-                Button{
+                // MARK: - Increase
+                CustomRemoteControlButton(name: Helper.Button.increaseButton) {
                     vm.increaseQuantity(product)
-                } label: {
-                    Image(systemName: "plus.rectangle.fill")
-                        .foregroundStyle(.primary)
-                        .font(.title)
                 }
-                .buttonStyle(.plain)
-                
             }
         }
         .padding()

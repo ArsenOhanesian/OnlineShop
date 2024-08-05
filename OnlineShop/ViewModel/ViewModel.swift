@@ -10,9 +10,8 @@ import FirebaseFirestore
 
 final class ViewModel: ObservableObject{
     // MARK: - Properties
-    private let db = Firestore.firestore().collection("shop")
     @Published var cartItems: [ProductModel] = []
-    
+    private let db = Firestore.firestore().collection(Helper.Firebase.shop)
     var cartItemCount: Int {
         cartItems.filter { $0.quantityInCart ?? 0 > 0}.count
     }
@@ -21,36 +20,37 @@ final class ViewModel: ObservableObject{
         cartItems.reduce(0) { $0 + ($1.price * ($1.quantityInCart ?? 0))}
     }
     
+    
+    
     // MARK: - Initializer
     init() {
         fetchItems()
     }
     
     // MARK: - Public Methods
-    
-    
     func toggleFavorite(in product: ProductModel){
-        updateProduct(product, data: ["isFavorite" : !product.isFavorite])
+        print(Helper.Firebase.isFavorite)
+        updateProduct(product, data: [Helper.Firebase.isFavorite : !product.isFavorite])
     }
     
     func addToCart(_ product: ProductModel){
-        updateProduct(product, data: ["quantityInCart" : 1])
+        updateProduct(product, data: [Helper.Firebase.quantityInCart : 1])
     }
     
     func removeFromCart(_ product: ProductModel){
-        updateProduct(product, data: ["quantityInCart" : 0])
+        updateProduct(product, data: [Helper.Firebase.quantityInCart : 0])
         
     }
     
     func increaseQuantity(_ product : ProductModel){
         let newQuantity = (product.quantityInCart ?? 0) + 1
-        updateProduct(product, data: ["quantityInCart" : newQuantity])
+        updateProduct(product, data: [Helper.Firebase.quantityInCart : newQuantity])
     }
     
     func decreaseQuantity(_ product: ProductModel){
         let currentQuantity = product.quantityInCart ?? 0
         let newQuantity = max(currentQuantity - 1, 1)
-        updateProduct(product, data: ["quantityInCart": newQuantity])
+        updateProduct(product, data: [Helper.Firebase.quantityInCart : newQuantity])
     }
     
     
@@ -69,6 +69,7 @@ final class ViewModel: ObservableObject{
     
     private func updateProduct(_ product: ProductModel, data: [String : Any]){
         guard let id = product.id else { return }
+        print(id)
         db.document(id).updateData(data)
     }
 }

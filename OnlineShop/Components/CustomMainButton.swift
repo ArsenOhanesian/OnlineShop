@@ -14,9 +14,7 @@ struct CustomMainButton: View {
     
     // MARK: - Body
     var body: some View {
-        Button{
-            action()
-        } label: {
+        Button(action: action, label: {
             Text(title)
                 .frame(maxWidth: .infinity)
                 .fontWeight(.bold)
@@ -25,7 +23,7 @@ struct CustomMainButton: View {
                 .background(.black)
                 .clipShape(Capsule())
                 .shadow(color: .black.opacity(0.3), radius: 10, x: 5, y: 8)
-        }
+        })
     }
 }
 

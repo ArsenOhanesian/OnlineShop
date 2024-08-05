@@ -10,7 +10,9 @@ import FirebaseFirestore
 struct CartView: View {
     // MARK: - Properties
     @EnvironmentObject var vm: ViewModel
-    @FirestoreQuery(collectionPath: "shop") private var products: [ProductModel]
+    
+    @FirestoreQuery(collectionPath: Helper.Firebase.shop) private var products: [ProductModel]
+    private let hPadding: CGFloat = 30
     
     // MARK: - Body
     var body: some View {
@@ -22,14 +24,14 @@ struct CartView: View {
             }
             
             
-            Text("Total: \(vm.totalPrice)")
+            Text("Загалом: \(vm.totalPrice)")
                 .titleFont()
                 .padding(.bottom)
             
-            CustomMainButton(title: "Buy") {}
-                .padding(.horizontal, 30)
+            CustomMainButton(title: Helper.Button.buy) {}
+                .padding(.horizontal, hPadding)
         }
-        .navigationTitle("Корзина")
+        .navigationTitle(Helper.Titles.cart)
         .background(.secondary.opacity(0.3))
     }
 }

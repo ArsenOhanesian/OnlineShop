@@ -11,18 +11,23 @@ struct ProductRow: View {
     // MARK: - Properties
     let product: ProductModel
     
+    private let imageSize: CGFloat = 100
+    private let spacing: CGFloat = 20
+    private let padding: CGFloat = 10
+    private let cornerRadius: CGFloat = 20
+    
     // MARK: - Body
     var body: some View {
             ZStack(alignment: .trailing) {
-                HStack(spacing: 20){
+                HStack(spacing: spacing){
                     
                     // MARK: - Image
                     if let url = URL(string: product.image){
-                        CardImageView(url: url, width: 100, height: 100)
+                        CardImageView(url: url, width: imageSize, height: imageSize)
                     }
                     
                     // MARK: - Info
-                    VStack(alignment: .leading, spacing: 20){
+                    VStack(alignment: .leading, spacing: spacing){
                         Text(product.name)
                             .titleFont()
                         if let quantityInCart = product.quantityInCart {
@@ -36,10 +41,11 @@ struct ProductRow: View {
                     
                     
                 }
-                .padding(10)
+                .padding(padding)
                 .background(.background)
-                .cornerRadius(20)
+                .cornerRadius(cornerRadius)
                 
+                // MARK: - Remote Control
                 RemoteControllRowView(product: product)
             }
             .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.5), radius: 7, x: 5, y: 6)
