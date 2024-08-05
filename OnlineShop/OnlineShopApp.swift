@@ -26,6 +26,7 @@ struct OnlineShopApp: App {
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(vm)
         }
     }
 }
