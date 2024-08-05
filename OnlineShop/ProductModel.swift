@@ -11,7 +11,7 @@ import FirebaseFirestore
 struct ProductModel: Identifiable, Codable{
     @DocumentID var id: String?
     var name: String
-    var descrioption: String
+    var description: String
     var image: String
     var price: Int
     var isFavorite: Bool
