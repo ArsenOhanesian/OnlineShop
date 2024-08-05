@@ -42,7 +42,7 @@ struct ProductCardView: View {
                     Text(product.name)
                         .titleFont()
                         .lineLimit(1)
-                    Text("$ \(product.price)")
+                    Text("₴ \(product.price)")
                         .subTitleFont()
                         
                 }

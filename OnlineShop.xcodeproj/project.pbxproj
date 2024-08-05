@@ -31,6 +31,7 @@
 		81A27BA72C61071300F6D168 /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A27BA62C61071300F6D168 /* ProductRow.swift */; };
 		81A27BA92C610B0300F6D168 /* RemoteControllRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A27BA82C610B0300F6D168 /* RemoteControllRowView.swift */; };
 		81A27BAB2C61107B00F6D168 /* CustomMainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A27BAA2C61107B00F6D168 /* CustomMainButton.swift */; };
+		81A27BAD2C61171B00F6D168 /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A27BAC2C61171B00F6D168 /* CartButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		81A27BA62C61071300F6D168 /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
 		81A27BA82C610B0300F6D168 /* RemoteControllRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControllRowView.swift; sourceTree = "<group>"; };
 		81A27BAA2C61107B00F6D168 /* CustomMainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMainButton.swift; sourceTree = "<group>"; };
+		81A27BAC2C61171B00F6D168 /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			children = (
 				81A27BA62C61071300F6D168 /* ProductRow.swift */,
 				81A27BA82C610B0300F6D168 /* RemoteControllRowView.swift */,
+				81A27BAC2C61171B00F6D168 /* CartButton.swift */,
 			);
 			path = Subview;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				810346412C60EE2C000059EA /* Text + extension.swift in Sources */,
+				81A27BAD2C61171B00F6D168 /* CartButton.swift in Sources */,
 				81A27B9A2C60FC7D00F6D168 /* ViewModel.swift in Sources */,
 				8103463D2C60DE91000059EA /* ProductCardView.swift in Sources */,
 				81A27B9F2C6100AC00F6D168 /* DetailView.swift in Sources */,

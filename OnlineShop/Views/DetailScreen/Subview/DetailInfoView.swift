@@ -19,7 +19,7 @@ struct DetailInfoView: View {
                 Text(product.name)
                     .titleFont()
                 Spacer()
-                Text("\(product.price)")
+                Text("₴ \(product.price)")
                     .titleFont()
             }
             

@@ -25,8 +25,11 @@ struct ProductRow: View {
                     VStack(alignment: .leading, spacing: 20){
                         Text(product.name)
                             .titleFont()
-                        Text("\(product.price * product.quantityInCart!)")
-                            .titleFont()
+                        if let quantityInCart = product.quantityInCart {
+                            let sum = product.price * quantityInCart
+                            Text("₴ \(sum)")
+                                .titleFont()
+                        }
                     }
                     
                     Spacer()
@@ -54,7 +57,7 @@ struct ProductRow: View {
     ,
             price: 4999,
             isFavorite: false, quantityInCart: 3
-        ))
+        )).environmentObject(ViewModel())
     }
 }
 
