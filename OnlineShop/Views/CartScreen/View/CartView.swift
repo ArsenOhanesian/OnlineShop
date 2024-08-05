@@ -22,7 +22,7 @@ struct CartView: View {
             }
             
             
-            Text("Total: ")
+            Text("Total: \(vm.totalPrice)")
                 .titleFont()
                 .padding(.bottom)
             
