@@ -18,4 +18,9 @@ final class ViewModel: ObservableObject{
         guard let id = product.id else { return }
         db.document(id).updateData(["isFavorite" : !product.isFavorite])
     }
+    
+    func addToCart(_ product: ProductModel){
+        guard let id = product.id else { return }
+        db.document(id).updateData(["quantityInCart" : 1])
+    }
 }

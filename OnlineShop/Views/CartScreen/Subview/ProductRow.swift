@@ -39,7 +39,8 @@ struct ProductRow: View {
                 
                 RemoteControllRowView(product: product)
             }
-            .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 7, x: 5, y: 6)
+            .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/.opacity(0.5), radius: 7, x: 5, y: 6)
+            .padding(.horizontal, 10)
     }
 }
 

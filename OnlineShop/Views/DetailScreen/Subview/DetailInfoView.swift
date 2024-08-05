@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DetailInfoView: View {
     // MARK: - Proiperties
+    @EnvironmentObject var vm: ViewModel
     let product: ProductModel
     
     // MARK: - Body
@@ -29,17 +30,8 @@ struct DetailInfoView: View {
             
             Spacer()
             
-            Button{
-                
-            } label: {
-                Text("Додати в кошик")
-                    .frame(maxWidth: .infinity)
-                    .fontWeight(.bold)
-                    .foregroundStyle(.white)
-                    .padding()
-                    .background(.black)
-                    .clipShape(Capsule())
-                    .shadow(color: .black.opacity(0.3), radius: 10, x: 5, y: 8)
+            CustomMainButton(title: "Add To Card") {
+                vm.addToCart(product)
             }
             
         }
