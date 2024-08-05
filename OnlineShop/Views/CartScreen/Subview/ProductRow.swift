@@ -13,7 +13,6 @@ struct ProductRow: View {
     
     // MARK: - Body
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
             ZStack(alignment: .trailing) {
                 HStack(spacing: 20){
                     
@@ -26,7 +25,7 @@ struct ProductRow: View {
                     VStack(alignment: .leading, spacing: 20){
                         Text(product.name)
                             .titleFont()
-                        Text("\(product.price)")
+                        Text("\(product.price * product.quantityInCart!)")
                             .titleFont()
                     }
                     
@@ -40,11 +39,7 @@ struct ProductRow: View {
                 
                 RemoteControllRowView(product: product)
             }
-        }
-        .padding(.horizontal, 10)
-        .navigationTitle("Корзина")
-        .background(.secondary.opacity(0.3))
-        
+            .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 7, x: 5, y: 6)
     }
 }
 
