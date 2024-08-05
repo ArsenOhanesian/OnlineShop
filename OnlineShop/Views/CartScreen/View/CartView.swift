@@ -9,14 +9,14 @@ import SwiftUI
 import FirebaseFirestore
 struct CartView: View {
     // MARK: - Properties
-    @FirestoreQuery(collectionPath: "shop",
-                    predicates: [.isGreaterThan("quantityInCart", 0)]) private var products: [ProductModel]
+    @EnvironmentObject var vm: ViewModel
+    @FirestoreQuery(collectionPath: "shop") private var products: [ProductModel]
     
     // MARK: - Body
     var body: some View {
         VStack {
             ScrollView(.vertical, showsIndicators: false) {
-                ForEach(products) { product in
+                ForEach(products.filter { $0.quantityInCart ?? 0 > 0 }) { product in
                     ProductRow(product: product)
                 }
             }
@@ -35,5 +35,5 @@ struct CartView: View {
 }
 
 #Preview {
-    CartView()
+    CartView().environmentObject(ViewModel())
 }
