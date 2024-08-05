@@ -28,6 +28,8 @@
 		81A27B9F2C6100AC00F6D168 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A27B9E2C6100AC00F6D168 /* DetailView.swift */; };
 		81A27BA32C6104BF00F6D168 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A27BA22C6104BF00F6D168 /* BackButtonView.swift */; };
 		81A27BA52C6105D400F6D168 /* DetailInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A27BA42C6105D400F6D168 /* DetailInfoView.swift */; };
+		81A27BA72C61071300F6D168 /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A27BA62C61071300F6D168 /* ProductRow.swift */; };
+		81A27BA92C610B0300F6D168 /* RemoteControllRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A27BA82C610B0300F6D168 /* RemoteControllRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		81A27B9E2C6100AC00F6D168 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		81A27BA22C6104BF00F6D168 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
 		81A27BA42C6105D400F6D168 /* DetailInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoView.swift; sourceTree = "<group>"; };
+		81A27BA62C61071300F6D168 /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
+		81A27BA82C610B0300F6D168 /* RemoteControllRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControllRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,8 @@
 		8103464A2C60F24A000059EA /* Subview */ = {
 			isa = PBXGroup;
 			children = (
+				81A27BA62C61071300F6D168 /* ProductRow.swift */,
+				81A27BA82C610B0300F6D168 /* RemoteControllRowView.swift */,
 			);
 			path = Subview;
 			sourceTree = "<group>";
@@ -355,7 +361,9 @@
 				81A27BA52C6105D400F6D168 /* DetailInfoView.swift in Sources */,
 				8103463F2C60E47E000059EA /* CardImageView.swift in Sources */,
 				81A27B982C60F99200F6D168 /* FavoritesView.swift in Sources */,
+				81A27BA92C610B0300F6D168 /* RemoteControllRowView.swift in Sources */,
 				810345E42C60C456000059EA /* MainView.swift in Sources */,
+				81A27BA72C61071300F6D168 /* ProductRow.swift in Sources */,
 				81A27BA32C6104BF00F6D168 /* BackButtonView.swift in Sources */,
 				810346212C60C93A000059EA /* ProductModel.swift in Sources */,
 				810345E22C60C456000059EA /* OnlineShopApp.swift in Sources */,
