@@ -35,6 +35,7 @@
 		8103461B2C60C768000059EA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8103461A2C60C768000059EA /* FirebaseStorage */; };
 		8103461D2C60C768000059EA /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 8103461C2C60C768000059EA /* FirebaseStorageCombine-Community */; };
 		8103461F2C60C768000059EA /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = 8103461E2C60C768000059EA /* FirebaseVertexAI-Preview */; };
+		810346212C60C93A000059EA /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810346202C60C93A000059EA /* ProductModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		810345E52C60C459000059EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		810345E82C60C459000059EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		810345EF2C60C5A2000059EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		810346202C60C93A000059EA /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				810345E32C60C456000059EA /* ContentView.swift */,
 				810345E52C60C459000059EA /* Assets.xcassets */,
 				810345E72C60C459000059EA /* Preview Content */,
+				810346202C60C93A000059EA /* ProductModel.swift */,
 			);
 			path = OnlineShop;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				810345E42C60C456000059EA /* ContentView.swift in Sources */,
+				810346212C60C93A000059EA /* ProductModel.swift in Sources */,
 				810345E22C60C456000059EA /* OnlineShopApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
