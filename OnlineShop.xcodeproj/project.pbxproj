@@ -25,6 +25,9 @@
 		810346412C60EE2C000059EA /* Text + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810346402C60EE2C000059EA /* Text + extension.swift */; };
 		81A27B982C60F99200F6D168 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A27B972C60F99200F6D168 /* FavoritesView.swift */; };
 		81A27B9A2C60FC7D00F6D168 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A27B992C60FC7D00F6D168 /* ViewModel.swift */; };
+		81A27B9F2C6100AC00F6D168 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A27B9E2C6100AC00F6D168 /* DetailView.swift */; };
+		81A27BA32C6104BF00F6D168 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A27BA22C6104BF00F6D168 /* BackButtonView.swift */; };
+		81A27BA52C6105D400F6D168 /* DetailInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A27BA42C6105D400F6D168 /* DetailInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		81A27B922C60F76B00F6D168 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81A27B972C60F99200F6D168 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		81A27B992C60FC7D00F6D168 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		81A27B9E2C6100AC00F6D168 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		81A27BA22C6104BF00F6D168 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
+		81A27BA42C6105D400F6D168 /* DetailInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,7 @@
 				81A27B8D2C60F6F800F6D168 /* Views */,
 				81A27B8E2C60F73000F6D168 /* ViewModel */,
 				81A27B8F2C60F73600F6D168 /* Model */,
+				81A27BA02C6104A800F6D168 /* Components */,
 				81A27B902C60F74400F6D168 /* Helpers */,
 				810345E72C60C459000059EA /* Preview Content */,
 				81A27B922C60F76B00F6D168 /* GoogleService-Info.plist */,
@@ -160,6 +167,7 @@
 		81A27B8D2C60F6F800F6D168 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				81A27B9B2C61008800F6D168 /* DetailScreen */,
 				810346422C60F1E7000059EA /* MainScreen */,
 				81A27B942C60F95700F6D168 /* FavoritesScreen */,
 				810346482C60F23F000059EA /* CartScreen */,
@@ -222,6 +230,39 @@
 			children = (
 			);
 			path = Subview;
+			sourceTree = "<group>";
+		};
+		81A27B9B2C61008800F6D168 /* DetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				81A27B9C2C61009100F6D168 /* View */,
+				81A27B9D2C61009400F6D168 /* Subview */,
+			);
+			path = DetailScreen;
+			sourceTree = "<group>";
+		};
+		81A27B9C2C61009100F6D168 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				81A27B9E2C6100AC00F6D168 /* DetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		81A27B9D2C61009400F6D168 /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				81A27BA42C6105D400F6D168 /* DetailInfoView.swift */,
+			);
+			path = Subview;
+			sourceTree = "<group>";
+		};
+		81A27BA02C6104A800F6D168 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				81A27BA22C6104BF00F6D168 /* BackButtonView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,10 +350,13 @@
 				810346412C60EE2C000059EA /* Text + extension.swift in Sources */,
 				81A27B9A2C60FC7D00F6D168 /* ViewModel.swift in Sources */,
 				8103463D2C60DE91000059EA /* ProductCardView.swift in Sources */,
+				81A27B9F2C6100AC00F6D168 /* DetailView.swift in Sources */,
 				8103463B2C60DCC5000059EA /* CartView.swift in Sources */,
+				81A27BA52C6105D400F6D168 /* DetailInfoView.swift in Sources */,
 				8103463F2C60E47E000059EA /* CardImageView.swift in Sources */,
 				81A27B982C60F99200F6D168 /* FavoritesView.swift in Sources */,
 				810345E42C60C456000059EA /* MainView.swift in Sources */,
+				81A27BA32C6104BF00F6D168 /* BackButtonView.swift in Sources */,
 				810346212C60C93A000059EA /* ProductModel.swift in Sources */,
 				810345E22C60C456000059EA /* OnlineShopApp.swift in Sources */,
 			);
