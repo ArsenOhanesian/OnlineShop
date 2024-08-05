@@ -20,6 +20,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct OnlineShopApp: App {
     // MARK: - Properties
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var vm = ViewModel()
     
     // MARK: - Body
     var body: some Scene {

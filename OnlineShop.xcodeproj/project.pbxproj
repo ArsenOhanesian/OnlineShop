@@ -24,6 +24,7 @@
 		8103463F2C60E47E000059EA /* CardImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8103463E2C60E47E000059EA /* CardImageView.swift */; };
 		810346412C60EE2C000059EA /* Text + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810346402C60EE2C000059EA /* Text + extension.swift */; };
 		81A27B982C60F99200F6D168 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A27B972C60F99200F6D168 /* FavoritesView.swift */; };
+		81A27B9A2C60FC7D00F6D168 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A27B992C60FC7D00F6D168 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		810346402C60EE2C000059EA /* Text + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text + extension.swift"; sourceTree = "<group>"; };
 		81A27B922C60F76B00F6D168 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		81A27B972C60F99200F6D168 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		81A27B992C60FC7D00F6D168 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 		81A27B8E2C60F73000F6D168 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				81A27B992C60FC7D00F6D168 /* ViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				810346412C60EE2C000059EA /* Text + extension.swift in Sources */,
+				81A27B9A2C60FC7D00F6D168 /* ViewModel.swift in Sources */,
 				8103463D2C60DE91000059EA /* ProductCardView.swift in Sources */,
 				8103463B2C60DCC5000059EA /* CartView.swift in Sources */,
 				8103463F2C60E47E000059EA /* CardImageView.swift in Sources */,

@@ -10,7 +10,6 @@ import SwiftUI
 struct ProductCardView: View {
     // MARK: - Properties
     let product: ProductModel
-    
     // MARK: - Body
     var body: some View {
         GeometryReader{ geo in
