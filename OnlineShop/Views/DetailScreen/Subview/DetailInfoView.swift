@@ -46,7 +46,3 @@ struct DetailInfoView: View {
         .padding(.horizontal, 30)
     }
 }
-
-#Preview {
-    DetailInfoView()
-}
